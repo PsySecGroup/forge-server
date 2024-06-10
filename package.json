@@ -1,0 +1,49 @@
+{
+  "name": "hypercrowd-server",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npx tsx watch src/index.ts",
+    "lint": "npx tsc --noEmit && npx eslint src/index.ts",
+    "test": "npx uvu -r esbuild-register tests/",
+    "build": "npx esbuild src/index.ts --bundle --platform=node --minify --outfile=dist/index.js",
+    "compile": "npm run lint && npm run test && npm run build",
+    "start": "node dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./src/index.d.ts",
+  "author": "HyperCrowd",
+  "license": "None",
+  "devDependencies": {
+    "@types/node": "^20.14.1",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
+    "esbuild": "^0.21.4",
+    "esbuild-register": "^3.5.0",
+    "eslint": "^9.4.0",
+    "globals": "^15.3.0",
+    "tsx": "^4.11.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.12.0",
+    "uvu": "^0.5.6"
+  },
+  "dependencies": {
+    "@dnlup/fastify-traps": "^3.0.2",
+    "@fastify/compress": "^7.0.3",
+    "@fastify/cookie": "^9.3.1",
+    "@fastify/cors": "^9.0.1",
+    "@fastify/csrf-protection": "^6.4.1",
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/helmet": "^11.1.1",
+    "@fastify/jwt": "^8.0.1",
+    "@fastify/middie": "^8.3.1",
+    "@fastify/multipart": "^8.3.0",
+    "@fastify/rate-limit": "^9.1.0",
+    "@fastify/session": "^10.9.0",
+    "@fastify/static": "^7.0.4",
+    "@fastify/under-pressure": "^8.5.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0"
+  }
+}
