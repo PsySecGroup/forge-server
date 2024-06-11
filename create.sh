@@ -56,7 +56,7 @@ import { getUploadedFile } from '@psysecgroup/forge-server'
 
 export function setRoutes (fastify) {
   fastify.get('/', async (request, reply) => {
-    reply.type('application.json').code(200)
+    reply.type('application/json').code(200)
     return { hello: 'world' }
   })
 
@@ -65,7 +65,7 @@ export function setRoutes (fastify) {
    */
   fastify.post('/upload', async (request, reply) => {
     const files = await getUploadedFile(request)
-    reply.type('application.json').code(200)
+    reply.type('application/json').code(200)
     return files
   })
 }
