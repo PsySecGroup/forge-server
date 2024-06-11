@@ -31,6 +31,15 @@ test('Empty Test', async () => {
 test.run()
 EOF
 
+  cat <<EOF > src/module.ts
+import { startHttp as StartHttp } from '@psysecgroup/forge-server'
+import { setRoutes } from './routes'
+
+export const startHttp = async (routeSetter = setRoutes) => {
+  return startHttp(setRoutes)
+}
+EOF
+
   cat <<EOF > src/index.ts
 import { startHttp } from '@psysecgroup/forge-server'
 import { setRoutes } from './routes'
@@ -81,16 +90,16 @@ EOF
   "types": "./src/index.d.ts",
   "devDependencies": {
     "@types/node": "^20.14.1",
-    "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "8.0.0-alpha.10",
+    "@typescript-eslint/parser": "8.0.0-alpha.10",
     "dotenv": "^16.4.5",
     "esbuild": "^0.21.4",
     "esbuild-register": "^3.5.0",
-    "eslint": "^9.4.0",
+    "eslint": "9.0.0",
     "globals": "^15.3.0",
     "tsx": "^4.11.2",
     "typescript": "^5.4.5",
-    "typescript-eslint": "^7.12.0",
+    "typescript-eslint": "8.0.0-alpha.10",
     "uvu": "^0.5.6"
   },
   "dependencies": {

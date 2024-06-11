@@ -41,17 +41,17 @@
     "@fastify/static": "^7.0.4",
     "@fastify/under-pressure": "^8.5.0",
     "@types/node": "^20.14.1",
-    "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.12.0",
+    "@typescript-eslint/eslint-plugin": "8.0.0-alpha.10",
+    "@typescript-eslint/parser": "8.0.0-alpha.10",
     "dotenv": "^16.4.5",
     "esbuild": "^0.21.4",
     "esbuild-register": "^3.5.0",
-    "eslint": "^9.4.0",
+    "eslint": "9.0.0",
     "fastify": "^4.27.0",
     "globals": "^15.3.0",
     "tsx": "^4.11.2",
     "typescript": "^5.4.5",
-    "typescript-eslint": "^7.12.0",
+    "typescript-eslint": "8.0.0-alpha.10",
     "uvu": "^0.5.6"
   }
 }
