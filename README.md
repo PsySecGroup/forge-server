@@ -1,7 +1,22 @@
 Server Forge
 ============
 
-The PsySec Forge for server projects. Uses Fastify, esbuild, uvu, dotenv, and TypeScript to build secure HTTP servers quickly.
+The PsySec Forge for server projects. Uses Fastify, esbuild, uvu, dotenv, and TypeScript to build secure HTTP servers quickly.  We support the following features right out the box:
+
+* [Reply compression](https://github.com/fastify/fastify-compress?tab=readme-ov-file#per-route-options) ([Settings](src/plugins/compress.ts))
+* [Cookies](https://github.com/fastify/fastify-cookie?tab=readme-ov-file#example) ([Settings](src/plugins/cookie.ts))
+* [CORS](https://github.com/fastify/fastify-cors?tab=readme-ov-file#options) ([Settings](src/plugins/cors.ts))
+* [CSRF Protection](https://github.com/fastify/csrf-protection) (For [cookies](https://github.com/fastify/csrf-protection?tab=readme-ov-file#use-with-fastifycookie) and [sessions](https://github.com/fastify/csrf-protection?tab=readme-ov-file#use-with-fastifysession)) ([Settings](src/plugins/csrf.ts))
+* [From Body Parsing](https://github.com/fastify/fastify-formbody?tab=readme-ov-file#example) ([Settings](src/plugins/formbody.ts))
+* [Security Headers](https://github.com/fastify/fastify-helmet?tab=readme-ov-file#example---fastifyhelmet-configuration-using-the-helmet-shorthand-route-option) ([Settings](src/plugins/helmet.ts))
+* [JWT Tokens](https://github.com/fastify/fastify-jwt?tab=readme-ov-file#usage) ([Settings](src/plugins/jwt.ts))
+* [Support for Express middleware](https://github.com/fastify/middie?tab=readme-ov-file#restrict-middleware-execution-to-a-certain-paths) ([Settings](src/plugins/middleware.ts))
+* [File Uploading](src/uploads.ts) ([Settings](src/plugins/multipart.ts))
+* [Rate Limiting](https://github.com/fastify/fastify-rate-limit?tab=readme-ov-file#options) ([Settings](src/plugins/rateLimit.ts))
+* [Sessions](https://github.com/fastify/session?tab=readme-ov-file#usage) ([Settings](src/plugins/session.ts))
+* [Static File Serving](https://github.com/fastify/fastify-static?tab=readme-ov-file#usage) ([Settings](src/plugins/static.ts))
+* [Graceful shutdowns](https://github.com/dnlup/fastify-traps?tab=readme-ov-file#custom-hooks) ([Settings](src/plugins/traps.ts))
+* [Pressure releif](https://github.com/fastify/fastify-multipart?tab=readme-ov-file#usage) ([Settings](src/plugins/underPressure.ts))
 
 ## New Project
 

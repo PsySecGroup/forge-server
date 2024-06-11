@@ -1,4 +1,4 @@
-// https://github.com/fastify/fastify-secure-session
+// https://github.com/fastify/session
 import session from '@fastify/session'
 import {
   SESSION_SECRET
