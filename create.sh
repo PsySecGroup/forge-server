@@ -1,8 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+{ # this ensures the entire script is downloaded #
 
 set -e  # Exit immediately if a command exits with a non-zero status
 
-function main () {
+main () {
   # Define variables
   read -p "Enter the name of your project: " PROJECT_DIR
 
@@ -98,6 +100,11 @@ EOF
 EOF
 
   npm install
+  npm run build
+  echo "Press Ctrl + C to stop the server"
+  npm start
 }
 
 main
+
+} # this ensures the entire script is downloaded #
