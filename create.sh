@@ -90,8 +90,8 @@ EOF
   "types": "./src/index.d.ts",
   "devDependencies": {
     "@types/node": "^20.14.1",
-    "@typescript-eslint/eslint-plugin": "8.0.0-alpha.10",
-    "@typescript-eslint/parser": "8.0.0-alpha.10",
+    "@typescript-eslint/eslint-plugin": "8.0.0-alpha.25",
+    "@typescript-eslint/parser": "8.0.0-alpha.25",
     "dotenv": "^16.4.5",
     "esbuild": "^0.21.4",
     "esbuild-register": "^3.5.0",
@@ -99,7 +99,7 @@ EOF
     "globals": "^15.3.0",
     "tsx": "^4.11.2",
     "typescript": "^5.4.5",
-    "typescript-eslint": "8.0.0-alpha.10",
+    "typescript-eslint": "8.0.0-alpha.25",
     "uvu": "^0.5.6"
   },
   "dependencies": {
@@ -109,7 +109,6 @@ EOF
 EOF
 
   npm install
-  git init
   npm run build
   cd ..
   rm create.sh
