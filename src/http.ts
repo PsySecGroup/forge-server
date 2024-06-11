@@ -68,9 +68,9 @@ async function build () {
   return fastify
 }
 
-export async function startHttp (port: number = PORT, host: string = HOST) {
+export async function startHttp (routeSetter = setRoutes, port: number = PORT, host: string = HOST) {
   const fastify = await build()
-  setRoutes(fastify)
+  routeSetter(fastify)
 
   await fastify.listen({ port, host }, (err, address) => {
     if (err) {

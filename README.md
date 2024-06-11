@@ -5,12 +5,24 @@ The PsySec Forge for server projects. Uses Fastify, esbuild, uvu, dotenv, and Ty
 
 ## Commands
 
-* `npm start`: Runs the compiled HTTP distribution.
+* `npm start`: Runs the compiled standalone HTTP server.
 * `npm run dev`: Runs the source code and recompiles on code changes.
 * `npm run lint`: Checks if your code is throwing syntax errors.
 * `npm run test`: Runs tests on your code to make sure it's working.
 * `npm run build`: Builds your TypeScript to a single JavaScript distribution.
 * `npm run compile`: Lints, tests, and builds your JavaScript distribution.
+
+## Development
+
+```ts
+import { startHttp } from '@psysecgroup/forge-server'
+
+async function main () {
+  await startHttp()
+}
+
+main()
+```
 
 ## Deployment
 
@@ -23,7 +35,15 @@ To prepare a deployment:
 * Copy the contents of your `assets` folder to the destination's `assets` folder
 * From the destination's `server` folder, run the HTTP server with `node index.js`
  
-## Development
+## New Project
+
+To create a new project that uses the `forge-server`, run the following:
+
+```bash
+curl -o- https://raw.githubusercontent.com/PsySecGroup/forge-server/main/create.sh | bash
+```
+
+## Research
 
 * Create a README that covers testing, building, templating, `.env`, and boilerplate assets
 * Compile might be better off making a zip file with directory and assets all prepopulated

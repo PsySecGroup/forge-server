@@ -1,34 +1,31 @@
 {
-  "name": "hypercrowd-server",
+  "name": "@psysecgroup/forge-server",
+  "author": "HyperCrowd",
   "version": "1.0.0",
   "description": "",
+  "license": "None",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PsySecGroup/forge-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PsySecGroup/forge-server/issues"
+  },
+  "homepage": "https://github.com/PsySecGroup/forge-server#readme",
   "scripts": {
     "dev": "npx tsx watch src/index.ts",
     "lint": "npx tsc --noEmit && npx eslint src/index.ts",
     "test": "npx uvu -r esbuild-register tests/",
-    "build": "npx esbuild src/index.ts --bundle --platform=node --minify --outfile=dist/index.js",
+    "build": "npm run build-standalone && npm run build-module",
+    "build-standalone": "npx esbuild src/index.ts --bundle --platform=node --minify --outfile=dist/standalone.js",
+    "build-module": "npx esbuild src/module.ts --bundle --platform=node --minify --outfile=dist/module.js",
     "compile": "npm run lint && npm run test && npm run build",
-    "start": "node dist/index.js"
+    "start": "node dist/standalone.js"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "main": "./dist/module.js",
+  "module": "./dist/module.js",
   "types": "./src/index.d.ts",
-  "author": "HyperCrowd",
-  "license": "None",
   "devDependencies": {
-    "@types/node": "^20.14.1",
-    "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.12.0",
-    "esbuild": "^0.21.4",
-    "esbuild-register": "^3.5.0",
-    "eslint": "^9.4.0",
-    "globals": "^15.3.0",
-    "tsx": "^4.11.2",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "^7.12.0",
-    "uvu": "^0.5.6"
-  },
-  "dependencies": {
     "@dnlup/fastify-traps": "^3.0.2",
     "@fastify/compress": "^7.0.3",
     "@fastify/cookie": "^9.3.1",
@@ -43,7 +40,18 @@
     "@fastify/session": "^10.9.0",
     "@fastify/static": "^7.0.4",
     "@fastify/under-pressure": "^8.5.0",
+    "@types/node": "^20.14.1",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
     "dotenv": "^16.4.5",
-    "fastify": "^4.27.0"
+    "esbuild": "^0.21.4",
+    "esbuild-register": "^3.5.0",
+    "eslint": "^9.4.0",
+    "fastify": "^4.27.0",
+    "globals": "^15.3.0",
+    "tsx": "^4.11.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.12.0",
+    "uvu": "^0.5.6"
   }
 }
