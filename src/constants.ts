@@ -39,7 +39,7 @@ export const UPLOAD_HEADER_PAIRS = asNumber('UPLOAD_HEADER_PAIRS', 2000)
 export const UPLOAD_PARTS = asNumber('UPLOAD_PARTS', 1000)
 
 // Where files are uploaded
-export const UPLOAD_PATH = asString('UPLOAD_PATH', '/tmp')
+export const UPLOAD_PATH = asString('UPLOAD_PATH', process.env.TMP)
 
 // Used for cookie signatures
 export const COOKIE_SECRET = asString('COOKIE_SECRET', 'secret')

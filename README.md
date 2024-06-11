@@ -50,6 +50,14 @@ async function main () {
 main()
 ```
 
+We even have a [default endpoint to test uploads](src/routes.ts).  You can try it out with:
+
+```bash
+// curl -X POST -F 'file=@/path/to/file' http://localhost:3000/upload
+````
+
+The result will be the path where the file was saved.
+
 ## Deployment
 
 To prepare a deployment:
