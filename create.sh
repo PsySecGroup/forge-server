@@ -69,8 +69,6 @@ export function setRoutes (fastify) {
     return files
   })
 }
-
-}
 EOF
 
   cat <<EOF > package.json
