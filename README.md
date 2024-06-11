@@ -3,6 +3,16 @@ Server Forge
 
 The PsySec Forge for server projects. Uses Fastify, esbuild, uvu, dotenv, and TypeScript to build secure HTTP servers quickly.
 
+## New Project
+
+To create a new project that uses the `forge-server`, run the following:
+
+```bash
+curl -s -O https://raw.githubusercontent.com/PsySecGroup/forge-server/main/create.sh && ./create.sh
+```
+
+Then modify the routes in `src/routes.ts` and use the commands above to test out your new server.
+
 ## Commands
 
 * `npm start`: Runs the compiled standalone HTTP server.
@@ -16,9 +26,10 @@ The PsySec Forge for server projects. Uses Fastify, esbuild, uvu, dotenv, and Ty
 
 ```ts
 import { startHttp } from '@psysecgroup/forge-server'
+import { setRoutes } from './routes'
 
 async function main () {
-  await startHttp()
+  await startHttp(setRoutes)
 }
 
 main()
@@ -34,14 +45,6 @@ To prepare a deployment:
 * Copy  `dist/index.js` to the destination's `dist` folder
 * Copy the contents of your `assets` folder to the destination's `assets` folder
 * From the destination's `server` folder, run the HTTP server with `node index.js`
- 
-## New Project
-
-To create a new project that uses the `forge-server`, run the following:
-
-```bash
-curl -s -O https://raw.githubusercontent.com/PsySecGroup/forge-server/main/create.sh && ./create.sh
-```
 
 ## Research
 

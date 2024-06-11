@@ -114,6 +114,7 @@ EOF
   cd ..
   rm create.sh
   cd $PROJECT_DIR
+  echo ""
   echo ">>> Press Ctrl + C to stop the HTTP server <<<"
   npm start
 }
