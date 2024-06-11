@@ -28,6 +28,14 @@ curl -s -O https://raw.githubusercontent.com/PsySecGroup/forge-server/main/creat
 
 Then modify the routes in `src/routes.ts` and use the commands above to test out your new server.
 
+## Updating Project
+
+As we add new featuers to the `forge-server`, you'll want to update them and bring them to your project.  Run the following command to do so:
+
+```bash
+npm update @psysecgroup/forge-server
+````
+
 ## Commands
 
 * `npm start`: Runs the compiled standalone HTTP server.
