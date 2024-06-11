@@ -40,7 +40,7 @@ To prepare a deployment:
 To create a new project that uses the `forge-server`, run the following:
 
 ```bash
-curl -o- https://raw.githubusercontent.com/PsySecGroup/forge-server/main/create.sh | bash
+curl -s -O https://raw.githubusercontent.com/PsySecGroup/forge-server/main/create.sh && ./create.sh
 ```
 
 ## Research

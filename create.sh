@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+{
 
 set -e  # Exit immediately if a command exits with a non-zero status
 
@@ -80,7 +82,7 @@ EOF
   "devDependencies": {
     "@types/node": "^20.14.1",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.12.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "dotenv": "^16.4.5",
     "esbuild": "^0.21.4",
     "esbuild-register": "^3.5.0",
@@ -98,6 +100,15 @@ EOF
 EOF
 
   npm install
+  git init
+  npm run build
+  cd ..
+  rm create.sh
+  cd $PROJECT_DIR
+  echo ">>> Press Ctrl + C to stop the HTTP server <<<"
+  npm start
 }
 
 main
+
+}
