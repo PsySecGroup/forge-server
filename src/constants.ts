@@ -8,7 +8,7 @@ export const MAX_PARAM_LENGTH = asNumber('MAX_PARAM_LENGTH', 100)
 export const BODY_LIMIT = asNumber('BODY_LIMIT', 1048576)
 export const PLUGIN_TIMEOUT = asNumber('PLUGIN_TIMEOUT', 10000)
 export const PORT = asNumber('PORT', 3000)
-export const HOST = asString('HOST', 'localhost')
+export const HOST = asString('HOST', '0.0.0.0')
 export const INCOMING_MIME = asString('INCOMING_MIME', 'application/json')
 export const OUTGOING_MIME = asString('OUTGOING_MIME', 'application/json')
 export const IGNORE_TRAILING_SLASH = asBoolean('IGNORE_TRAILING_SLASH', true)
@@ -16,6 +16,7 @@ export const IGNORE_DUPLICATE_SLASHES = asBoolean('IGNORE_DUPLICATE_SLASHES', tr
 export const LOGGER = asBoolean('LOGGER', true)
 export const REQUEST_ID_HEADER = asBoolean('REQUEST_ID_HEADER', false)
 export const USE_HTTP2 = asBoolean('USE_HTTP2', false)
+export const STATIC_PATH = asString('STATIC_PATH', process.cwd() + '/assets')
 
  // Max field name size in bytes
 export const UPLOAD_FIELD_NAME_SIZE = asNumber('UPLOAD_FIELD_NAME_SIZE', 100)

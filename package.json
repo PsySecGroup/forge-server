@@ -3,7 +3,7 @@
   "author": "HyperCrowd",
   "version": "1.0.0",
   "description": "",
-  "license": "None",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/PsySecGroup/forge-server.git"
