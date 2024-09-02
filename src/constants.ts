@@ -18,6 +18,9 @@ export const REQUEST_ID_HEADER = asBoolean('REQUEST_ID_HEADER', false)
 export const USE_HTTP2 = asBoolean('USE_HTTP2', false)
 export const STATIC_PATH = asString('STATIC_PATH', process.cwd() + '/assets')
 
+ // Turns on pressure interrupts from the underPressure plugin
+export const ENABLE_PRESSURE = asBoolean('ENABLE_PRESSURE', false)
+
  // Max field name size in bytes
 export const UPLOAD_FIELD_NAME_SIZE = asNumber('UPLOAD_FIELD_NAME_SIZE', 100)
 
